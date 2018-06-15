@@ -14,15 +14,13 @@ exclude = [".travis.yml", ".rustfmt.toml"]
 gbm-sys = { version = "0.1", path = "./gbm-sys" }
 libc = "0.2"
 bitflags = "1.0.0"
-wayland-server = { version = "0.12", optional = true }
 drm = { version = "0.3", optional = true }
 
 [dev-dependencies]
 drm = "0.3.0"
 
 [features]
-default = ["import-wayland", "import-egl", "drm-support"]
-import-wayland = ["wayland-server"]
+default = ["import-egl", "drm-support"]
 import-egl = []
 drm-support = ["drm"]
 gen = ["gbm-sys/gen"]
